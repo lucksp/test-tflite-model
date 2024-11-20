@@ -12,6 +12,9 @@ I noticed, starting in October 2024 that newly trained models do not load in the
 
 I currently use Google VertexAI to run & train my model, which is exported to TFLite. The model attached to this repo was also created in Vertex to provide smaple.
 
+It seems that the `TensorflowModelDelegate` argument type causes the model to no longer load:
+`const modelData = useTensorflowModel(modelAsset, GPUDelegate);`, only by removing it do the new TFLite models successfully load.
+
 ## Get started
 
 1. Install dependencies
